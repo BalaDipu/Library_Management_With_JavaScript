@@ -6,6 +6,11 @@ const addBook = e=>{
         bookISBN: document.getElementById('isbn').value,
         bookCoverImage: document.getElementById('cover-image').value
     }
+    // Name Validation
+    
+    // ISBN validation 
+
+    // Image validation 
 
     if (localStorage.getItem("allBooks") == null) {
         localStorage.setItem("allBooks", '[]');
@@ -19,21 +24,11 @@ const addBook = e=>{
 
 function addAnother(){
     document.getElementById("add_another").innerHTML="Add another book!";
-    // let dataFromAddBook ={
-    //     addAnotherBook: document.getElementsByClassName('add-another').action,
-    //     goHome: document.getElementsByClassName('go-home').action,
-    // }
-    // console.log(dataFromAddBook.addAnotherBook)
-    // e.preventDefault();
-    // var action = document.getElementsByClassName("")[x].value;
-    // document.getElementsByClassName("form_id").action = action;
 }
-    function backHome(){
-        document.getElementById("go_home").innerHTML = "Back home!";
-    }
 
-
-
+function backHome() {
+    document.getElementById("go_home").innerHTML = "Back home!";
+}
 // 1. Title
 // 2. Author
 // 3. Price
