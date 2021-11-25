@@ -43,9 +43,9 @@ const signUp = e => {
         if (localStorage.getItem("allUsers") == null) {
             localStorage.setItem("allUsers", '[]');
         }
-        var oldUser = JSON.parse(localStorage.getItem('allUsers'));
-        oldUser.push(signUpData);
-        localStorage.setItem('allUsers', JSON.stringify(oldUser));
+        var prevUser = JSON.parse(localStorage.getItem('allUsers'));
+        prevUser.push(signUpData);
+        localStorage.setItem('allUsers', JSON.stringify(prevUser));
     } else {
         document.getElementById('msg').innerHTML = "*Passwords are not same";
         e.preventDefault();

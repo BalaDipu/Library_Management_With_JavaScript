@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/addBookStyle.css">
+    <title>Addv New Book</title>
+    <script src="../JavaScript/UserAuthentication/userAuth.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="new-book-header">Add New Book</div>
+        <form id="form_id" role="form" onsubmit="addBook(event)">
+            <div class="form-grp">
+                <input type="text" placeholder="Book Title" name="title" id="title" required>
+            </div>
+            <div class="form-grp">
+                <input type="text" placeholder="Author Name" name="author" id="author" required>
+            </div>
+            <div class="form-grp">
+                <input type="number" placeholder="Price of this book" name="price" id="price" required>
+            </div>
+            <div class="form-grp">
+                <input type="text" placeholder="ISBN of this book" name="isbn" id="isbn" required>
+            </div>
+            <div class="form-grp">
+                <input type="text" placeholder="Cover Image" name="cover-image" id="cover-image" required>
+            </div>
+            <div class="btn">
+                <button onclick="addAnother() || backHome()" type="submit">Add</button>
+            </div>
+            <a class="add_another" id="add_another" href="./addBook.html"></a>
+            <a class="go_home" id="go_home" href="./home.html"></a>
+        </form>
+    </div>
+    <script src="../JavaScript/HandlerFunction/addBook.js"></script>
+</body>
+
+</html>
+
+<!-- 
+1. Title
+2. Author
+3. Price
+4. ISBN
+5. Cover image -->
