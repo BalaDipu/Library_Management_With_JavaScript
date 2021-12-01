@@ -16,6 +16,7 @@
         <form id="form_id" role="form" onsubmit="addBook(event)">
             <div class="form-grp">
                 <input type="text" placeholder="Book Title" name="title" id="title" required>
+                <div id="titleMsg"></div>
             </div>
             <div class="form-grp">
                 <input type="text" placeholder="Author Name" name="author" id="author" required>
@@ -25,9 +26,11 @@
             </div>
             <div class="form-grp">
                 <input type="text" placeholder="ISBN of this book" name="isbn" id="isbn" required>
+                <div id="isbnMsg"></div>
             </div>
             <div class="form-grp">
-                <input type="text" placeholder="Cover Image" name="cover-image" id="cover-image" required>
+                <input type="file" id="cover-image" placeholder="Cover Image" name="myfile"required multiple><br><br>
+                <!-- <input type="text" placeholder="Cover Image" name="cover-image" id="cover-image" required> -->
             </div>
             <div class="btn">
                 <button onclick="addAnother() || backHome()" type="submit">Add</button>

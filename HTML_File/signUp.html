@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/signUpStyle.css">
+    <script src="../JavaScript/HandlerFunction/integrateHTML.js"></script>
     <title>SignUp</title>
 </head>
 <body>
+    <div includeHTML="./SeparatedFile/navbar.html"></div>
+    <script>
+        includeHTML();
+    </script>
     <!-- User Registration -->
     <section class="container">
         <div class="signUp">
@@ -17,21 +22,21 @@
             <form action="./signIn.html" role="form" onsubmit="signUp(event)">
                 <div class="form-grp">
                     <label for="name" >Name : </label>
-                    <input type="text" name="name" id="name" placeholder="Your Name">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-grp">
                     <label for="email" >Email : </label>
-                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <input type="email" name="email" id="email" placeholder="Your Email"required>
                 </div>
                 <div class="msg1" id="msg1"></div>  
                 <div class="form-grp">
                     <label for="password" >Password : </label>
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="password" name="password" id="password" placeholder="Password"required>
                 </div>
                 <div class="msg" id="msg"></div>  
                 <div class="form-grp">
                     <label for="password" >Confirm Password : </label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"required>
                 </div>
                 <div class="form-grp">
                     <button type="submit" >Sign Up</button>

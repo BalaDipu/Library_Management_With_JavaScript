@@ -1,0 +1,55 @@
+
+ @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+ :root {
+    --primaryColor: #e26d06;
+    --mainWhite:#fff;
+    --mainBlack:rgb(3, 3, 3);
+    --mainGrey :#ececec;
+    --mainSpacing :0.1rem;
+    --mainTransition : all 0.3s linear;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    font-family:"Lato", sans-serif;
+}
+.hero {
+    min-height: calc(100vh - 0px);
+    background: url("../img/hero4.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content : center;
+}
+.banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 2rem;
+}
+.banner-title {
+    padding: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+}
+.banner-btn {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+    border-radius: 2%;
+}
+.banner-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+}

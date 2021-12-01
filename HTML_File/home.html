@@ -17,16 +17,27 @@
             }
         }
     </script>
+    <script src="../JavaScript/HandlerFunction/integrateHTML.js"></script>
+    <script src="../JavaScript/HandlerFunction/home.js"></script>
     <title>Library</title>
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="./signIn.html" class="nav-grp">Sign In</a>
-        <a href="./signUp.html" class="nav-grp">Sign Up</a>
+    <div includeHTML="./SeparatedFile/homeNav.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <div>
         <a onclick="clickAdd(event)" href="./addBook.html" class="nav-grp">Add New Book</a>
     </div>
-    <div class="container">
+    <section class="products">
+        <div class="section-title">
+            <h2>Our Collections</h2>
+        </div>
+        <div class="products-center">
+        </div>
+    </section>
+    <!-- <div class="container">
         <div class="home-head">
             Student Library
         </div>
@@ -53,7 +64,7 @@
                 Book 5
             </div>
         </div>
-    </div>
+    </div> -->
     <script src="../JavaScript/HandlerFunction/addBook.js"></script>
 </body>
 

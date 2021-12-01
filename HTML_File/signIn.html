@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/signInStyle.css">
+    <script src="../JavaScript/HandlerFunction/integrateHTML.js"></script>
     <title>SignIn</title>
 </head>
 <body>
+    <div includeHTML="./SeparatedFile/navbar.html"></div>
+    <script>
+        includeHTML();
+    </script>
     <!-- User Registration -->
     <section class="container">
         <div class="signUp">
@@ -18,11 +23,11 @@
             <form action="./home.html" role="form" onsubmit="signIn(event)">
                 <div class="form-grp">
                     <label for="email" >Email : </label>
-                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-grp">
                     <label for="password" >Password : </label>
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="password" name="password" id="password" placeholder="Password"required>
                 </div>
                 <div class="msg" id="msg"></div>  
                 <div class="form-grp">

@@ -1,4 +1,4 @@
-const addBook = e=>{
+const addBook = e => {
     let bookData = {
         bookTitle: document.getElementById('title').value,
         bookAuthor: document.getElementById('author').value,
@@ -7,10 +7,35 @@ const addBook = e=>{
         bookCoverImage: document.getElementById('cover-image').value
     }
     // Name Validation
-    
-    // ISBN validation 
+    function titleValidate(bookTitle) {
+        if (bookTitle.length < 3) {
+            document.getElementById('titleMsg').innerHTML = "*Your bookTitle must be at least 3 characters";
+            e.preventDefault();
+        }
+        return true;
+    }
+    titleValidate(bookData.bookTitle);
+
+
+    // ISBN validation
+ function isValidIsbn(bookISBN) {
+        try{
+            if(!/^\d{9}[\d|X]$/.test(bookISBN)){
+                document.getElementById('isbnMsg').innerHTML = "*Invalid ISBN";
+                e.preventDefault();
+                return false;
+             }
+             return true;
+        }catch(err){
+            console.log(err.name);
+        }
+ }
+     isValidIsbn(bookData.bookISBN);
 
     // Image validation 
+    function imageValidate(imageName) {
+
+    }
 
     if (localStorage.getItem("allBooks") == null) {
         localStorage.setItem("allBooks", '[]');
@@ -22,8 +47,8 @@ const addBook = e=>{
     e.preventDefault();
 }
 
-function addAnother(){
-    document.getElementById("add_another").innerHTML="Add another book!";
+function addAnother() {
+    document.getElementById("add_another").innerHTML = "Add another book!";
 }
 
 function backHome() {

@@ -10,9 +10,9 @@ const signIn = e => {
             if (localStorage.getItem("loginUsers") == null) {
                 localStorage.setItem("loginUsers", '[]');
             }
-            var oldUser = JSON.parse(localStorage.getItem('loginUsers'));
-            oldUser.push(signInData);
-            localStorage.setItem('loginUsers', JSON.stringify(oldUser));
+            var prevUser = JSON.parse(localStorage.getItem('loginUsers'));
+            prevUser.push(signInData);
+            localStorage.setItem('loginUsers', JSON.stringify(prevUser));
             flag = false;
         }
     })
