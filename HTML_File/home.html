@@ -6,30 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/homeStyle.css">
-    <script>
-        function clickAdd(e) {
-            console.log("yes");
-            let user = JSON.parse(localStorage.getItem("loginUsers"));
-            if (!user) {
-                setTimeout(() => alert('Please login!!'),10);
-                e.preventDefault();
-                
-            }
-        }
-    </script>
-    <script src="../JavaScript/HandlerFunction/integrateHTML.js"></script>
+
+    <script src="../JavaScript/UserAuthentication/userAuth.js"></script>
     <script src="../JavaScript/HandlerFunction/home.js"></script>
+    <script src="../JavaScript/HandlerFunction/logout.js"></script>
     <title>Library</title>
 </head>
 
 <body>
-    <div includeHTML="./SeparatedFile/homeNav.html"></div>
-    <script>
-        includeHTML();
-    </script>
-    <div>
-        <a onclick="clickAdd(event)" href="./addBook.html" class="nav-grp">Add New Book</a>
-    </div>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span>
+                <a href="#"><img src="../../img/logo.png" alt="home logo" /></a>
+            </span>
+
+            <div class="cart-btn">
+                <span class="nav-link">
+                    <a href="../../HTML_File/addBook.html">Add Book</a>
+                    <a onclick="logout(event)">Logout</a>
+                </span>
+            </div>
+        </div>
+    </nav>
     <section class="products">
         <div class="section-title">
             <h2>Our Collections</h2>

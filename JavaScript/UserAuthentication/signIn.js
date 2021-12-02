@@ -7,6 +7,7 @@ const signIn = e => {
     var flag = true;
     users.map(user => {
         if (user.userEmail === signInData.userEmail && user.userPassword === signInData.userPassword) {
+            localStorage.setItem('userLog', JSON.stringify(signInData));
             if (localStorage.getItem("loginUsers") == null) {
                 localStorage.setItem("loginUsers", '[]');
             }

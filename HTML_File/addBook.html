@@ -7,10 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/addBookStyle.css">
     <title>Addv New Book</title>
+
     <script src="../JavaScript/UserAuthentication/userAuth.js"></script>
+    <script src="../JavaScript/HandlerFunction/logout.js"></script>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar-center"> 
+            <span>
+                <a href="../../HTML_File/home.html"><img src="../../img/logo.png" alt="home logo" /></a>
+            </span>
+            <div class="cart-btn">
+                <span class="nav-link">
+                    <a onclick="logout(event)">Logout</a>
+                </span>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <div class="new-book-header">Add New Book</div>
         <form id="form_id" role="form" onsubmit="addBook(event)">
@@ -29,13 +43,13 @@
                 <div id="isbnMsg"></div>
             </div>
             <div class="form-grp">
-                <input type="file" id="cover-image" placeholder="Cover Image" name="myfile"required multiple><br><br>
-                <!-- <input type="text" placeholder="Cover Image" name="cover-image" id="cover-image" required> -->
+                <input type="file" name="file" accept=".jpg, .gif, .jpeg, .png, .PSD" id="cover-image"
+                    placeholder="Cover Image" name="myfile" required multiple><br><br>
             </div>
             <div class="btn">
-                <button onclick="addAnother() || backHome()" type="submit">Add</button>
+                <button type="submit">Add</button>
             </div>
-            <a class="add_another" id="add_another" href="./addBook.html"></a>
+            <div class="success" id="success"></div>
             <a class="go_home" id="go_home" href="./home.html"></a>
         </form>
     </div>
