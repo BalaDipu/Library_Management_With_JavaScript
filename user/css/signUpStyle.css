@@ -1,0 +1,198 @@
+:root {
+    --primaryColor: #e26d06;
+    --mainWhite:#fff;
+    --mainBlack:rgb(3, 3, 3);
+    --mainGrey :#ececec;
+    --mainSpacing :0.1rem;
+    --mainTransition : all 0.3s linear;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+/* nav start  */
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    /* background: rgb(10, 10, 10); */
+    background-color: rgb(214, 214, 214);
+    z-index: 1;
+}
+
+.navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+
+}
+.nav-link {
+font-size: 1.5rem;    
+}
+
+.nav-link a:nth-child(2){
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 1rem;
+    font-family:"Lato", sans-serif;
+    font-weight:normal;
+    padding: 8px;
+    background-color: transparent;
+    border: 0.2px solid var(--primaryColor);
+    color: #000;
+    border-radius: 8px;
+    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+.nav-link a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-right: 40px;
+    font-size: 1rem;
+    font-family:"Lato", sans-serif;
+    font-weight:normal;
+    padding: 8px;
+    background-color: #e26d06;
+    border-radius: 8px;
+    transition: 0.1s ease-in-out;
+    border: 0.2px solid #e26d06;
+    transition: 0.2s ease-in-out;
+}
+.nav-link a:hover{
+    background-color: transparent;
+    border: 0.2px solid #e26d06;
+    color: #000;
+}
+.nav-link a:active{
+    background-color: rgb(176, 216, 192);
+}
+
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+}
+.cart-items{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 25%;
+    color: var(--mainWhite);
+}
+.fa-cart-plus{
+    color: rgb(253, 253, 253);
+}
+.fa-bars{
+    color: rgb(253, 253, 253);
+}
+
+/* nav end */
+
+
+body{
+    min-height: calc(100vh - 0px);
+    background: url("../img/hero4.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content : center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 0 auto;
+    width: 350px;
+    height: 400px;
+    padding-top: 50px;
+    background: rgba(255, 255, 255, 0.7);
+}
+.signUp{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    font-size: 27px;
+    font-weight: 650;
+}
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container label{
+    display: none;
+}
+.form-container input{
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 10px;
+    background-color:rgb(133, 133, 133);
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 0.2px solid #fff;
+}
+::placeholder {
+    color:var(--mainWhite);
+    font-size: 14px;
+  }
+  .form-container input:focus {
+    outline: none !important;
+    border: 0.2px solid var(--primaryColor);
+  }
+
+
+.btn{
+    margin: 10px auto 10px auto ;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.container button{
+    padding: 10px;
+    border-radius: 6px;
+    width: 300px;
+    border:none;
+    background-color:var(--primaryColor);
+    color: white;
+    font-size: 17px;
+    font-weight: 450;
+    cursor: pointer;
+    transition:0.2s ease-in-out;
+}
+
+.container button:hover{
+    background-color:#e78630;
+}
+.container a{
+    font-size: 18px;
+    text-decoration: none;
+    margin:10px auto 0 auto;
+    color: rgb(255, 0, 0);
+}
+
+.have-account a{
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-weight: 650;
+}
+
+.have-account{
+    margin:10px auto 0 auto;
+    font-size: 18px;
+}
+
+.msg1,
+.msg{
+    color: red;
+}

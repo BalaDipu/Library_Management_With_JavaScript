@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar start */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    /* background: rgb(10, 10, 10); */
+    background-color: rgb(214, 214, 214);
+    z-index: 1;
+}
+
+.navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+
+}
+.nav-link {
+font-size: 1.5rem;    
+}
+.nav-link a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    /* color:#ff0000 ; */
+    margin-right: 40px;
+    font-size: 1rem;
+    font-family:"Lato", sans-serif;
+    font-weight:normal;
+    padding: 8px;
+    background-color: #ff0000;
+    border-radius: 8px;
+    transition: 0.1s ease-in-out;
+    border: 0.2px solid #ff0000;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.nav-link a:hover{
+    background-color: transparent;
+    border: 0.2px solid #ff0000;
+    color: #ff0000;
+}
+.nav-link a:active{
+    background-color: rgb(241, 232, 211);
+}
+
+/* navbar end */
+
+body{
+    background-color: rgb(165, 165, 165);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 0 auto;
+    width: 350px;
+    height: 430px;
+    padding-top: 50px;
+    background-color:rgb(255, 255, 255) ;
+}
+.new-book-header{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px 10px 10px;
+    font-size: 27px;
+    font-weight: 650;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container form input{
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 10px;
+    background-color:rgb(212, 212, 212);
+    color: black;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border:none
+}
+
+.btn{
+    margin: 10px auto 10px auto ;
+}
+.container button{
+    padding: 10px;
+    border-radius: 6px;
+    width: 300px;
+    border:none;
+    background-color:rgb(29, 104, 58);
+    color: white;
+    font-size: 17px;
+    font-weight: 450;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.container button:hover{
+    background-color: rgb(28, 153, 76);
+}
+.success,
+.go_home{
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration:none;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top:2px;
+    color: rgb(28, 153, 76);
+}
+.go_home{
+    color: #000;
+    margin-bottom: 10px;
+}

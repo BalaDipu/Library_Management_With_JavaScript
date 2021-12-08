@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signUpStyle.css">
+    <link rel="stylesheet" href="../css/navStyle.css">
+    <script src="../JavaScript/HandlerFunction/integrateHTML.js"></script>
+    <script src="../JavaScript/UserAuthentication/withLoginAuth.js"></script>
+    <title>SignUp</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span>
+               <a href="../HTML_File/index.html"><img src="../img/logo.png" alt="home logo" /></a>
+            </span>
+            
+            <div class="cart-btn">
+                <span class="nav-link">
+                        <a id="signin" href="./signIn.html" class="nav-grp">Sign In</a>
+                        <a id="signup" href="./signUp.html" class="nav-grp">Sign Up</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- User Registration -->
+    <section class="container">
+        <div class="signUp">
+            Sign Up 
+        </div>
+        <div class="form-container">
+            <form action="./signIn.html" role="form" onsubmit="signUp(event)">
+                <div class="form-grp">
+                    <label for="name" >Name : </label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-grp">
+                    <label for="email" >Email : </label>
+                    <input type="email" name="email" id="email" placeholder="Your Email"required>
+                </div>
+                <div class="msg1" id="msg1"></div>  
+                <div class="form-grp">
+                    <label for="password" >Password : </label>
+                    <input type="password" name="password" id="password" placeholder="Password"required>
+                </div>
+                <div class="msg" id="msg"></div>  
+                <div class="form-grp">
+                    <label for="password" >Confirm Password : </label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"required>
+                </div>
+                <div class="form-grp">
+                    <button type="submit" >Sign Up</button>
+                </div>
+            </form>
+        </div>
+        <div class="have-account">
+            Already have an account? <a href="../HTML_File/signIn.html">Sign in</a>
+        </div>
+    </section>
+    <script src="../JavaScript/UserAuthentication/signUp.js"></script>
+</body>
+</html>

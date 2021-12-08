@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signInStyle.css">
+    <link rel="stylesheet" href="../css/navStyle.css">
+    <script src="../JavaScript/HandlerFunction/integrateHTML.js"></script>
+    <script src="../JavaScript/UserAuthentication/withLoginAuth.js"></script>
+    <title>SignIn</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span>
+               <a href="../HTML_File/index.html"><img src="../img/logo.png" alt="home logo" /></a>
+            </span>
+            
+            <div class="cart-btn">
+                <span class="nav-link">
+                        <a id="signin" href="./signIn.html" class="nav-grp">Sign In</a>
+                        <a id="signup" href="./signUp.html" class="nav-grp">Sign Up</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- User Registration -->
+    <section class="container">
+        <div class="signUp">
+            Sign In 
+        </div>
+        <div class="form-container">
+            <!--  -->
+            <form action="./home.html" role="form" onsubmit="signIn(event)">
+                <div class="form-grp">
+                    <label for="email" >Email : </label>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-grp">
+                    <label for="password" >Password : </label>
+                    <input type="password" name="password" id="password" placeholder="Password"required>
+                </div>
+                <div class="msg" id="msg"></div>  
+                <div class="form-grp">
+                    <button type="submit" >Sign In</button>
+                </div>
+            </form>
+        </div>
+        <a href="forgotPassword.html">Forgot your password?</a>
+        <div class="have-account">
+            Don't have an account? <a href="../HTML_File/signUp.html">Sign up</a>
+        </div>
+    </section>
+    <script src="../JavaScript/UserAuthentication/signIn.js"></script>
+</body>
+</html>

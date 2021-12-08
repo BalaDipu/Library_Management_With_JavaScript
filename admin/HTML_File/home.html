@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/homeStyle.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../JavaScript/UserAuthentication/userAuth.js"></script>
+    <script src="../JavaScript/HandlerFunction/logout.js"></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span>
+                <a href="#"><img src="../img/logo.png" alt="home logo" /></a>
+            </span>
+
+            <div class="cart-btn">
+                <span class="nav-link">
+                    <a href="../HTML_File/addBook.html">Add Book</a>
+                    <a onclick="logout(event)">Logout</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- body section start -->
+    <section class="books">
+        <div class="section-title">
+            <h2>Our Collections</h2>
+        </div>
+        <div id="books-center" class="books-center">
+        </div>
+    </section>
+    <!-- body section end -->
+
+    <!-- modal window start -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="../JavaScript/HandlerFunction/home.js"></script>
+    <script src="../JavaScript/HandlerFunction/addBook.js"></script>
+</body>
+
+</html>
