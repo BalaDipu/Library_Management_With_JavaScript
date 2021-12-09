@@ -11,7 +11,6 @@ function displayBooks() {
             <h3>${book.bookTitle}</h3>
                 <div class="img-container">
                     <img src=${book.bookCoverImage} alt="book" class="book-img">
-                    <i title="Delete" onclick="Delete(${book.bookISBN})" class="fas fa-trash-alt m-1 text-danger delete"></i>
                     <button data-toggle="modal" data-target="#myModal1" onclick ="editWindow(${book.bookISBN})" id = "edit-btn" class="edit-btn" data-id=${book.bookISBN}>
                         edit book
                     </button>
@@ -26,25 +25,6 @@ function displayBooks() {
 }
 
 window.onload = displayBooks();
-
-// Delete Book 
-// const Delete = isbn => {
-//     if (isbn) {
-//         if (confirm('Are you sure you want to delete this?')) {
-//             let books = JSON.parse(localStorage.getItem('allBooks'))
-//             if (books) {
-//                 var newBooks = books.filter(book => {
-//                     return book.isbn != isbn;
-//                 })
-//                 localStorage.removeItem('books')
-//                 localStorage.setItem('books', JSON.stringify(newBooks))
-//                 let allBooks = document.getElementById('books')
-//                 allBooks.innerHTML = ''
-//                 showBooks()
-//             }
-//         }
-//     }
-// }
 
 // Edit book 
 function editWindow(isbn) {
@@ -77,7 +57,7 @@ function editWindow(isbn) {
                         placeholder="Cover Image" name="myfile" multiple><br><br>
                 </div>
                 <div class="edit-submit">
-                    <button id="update" data-dismiss="modal" type="submit">Submit</button>
+                    <button id="update" type="submit">Submit</button>
                 </div>
                 <div class="success" id="success"></div>
                 <a class="go_home" id="go_home" href="./home.html"></a>
@@ -103,15 +83,14 @@ function Update(e){
         bookPrice: document.getElementById('price').value,
         bookCoverImage: document.querySelector('input[type=file]').files[0]
     }
-
     if (updateBook.bookCoverImage) {
         const reader = new FileReader();
         reader.addEventListener("load", () => {
             let books = JSON.parse(localStorage.getItem('allBooks'))
             books.map((book, index) => {
                 if (book.bookISBN == updateBook.bookISBN) {
-                    updateBook.bookCoverImage = reader.result
-                    updateArray('allBooks', index, updateBook)
+                    updateBook.bookCoverImage = reader.result;
+                    updateArray('allBooks', index, updateBook);
                     return;
                 }
             })
@@ -122,12 +101,14 @@ function Update(e){
         books.map((book, index) => {
             if (book.bookISBN == updateBook.bookISBN) {
                 updateBook.bookCoverImage = book.bookCoverImage;
-                updateArray('allBooks', index, updateBook)
+                updateArray('allBooks', index, updateBook);
                 return;
             }
         })
     }
-    let allBooks = document.getElementById('allBooks')
+    let allBooks = document.getElementById('books-center');
+    allBooks.innerHTML = ''
     displayBooks();
+    document.getElementById('update').setAttribute('data-dismiss', 'modal');
 }
-// window.onload = editWindow();
+// Update();

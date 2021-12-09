@@ -14,8 +14,8 @@
      box-sizing: border-box;
  }
  body{
+     font-size: 21px;
      color: var(--mainBlack);
-     background: var(--mainWhite);
      font-family:"Lato", sans-serif;
  }
 .navbar {
@@ -44,29 +44,29 @@
 .navbar-center span{
     cursor: pointer;
 }
-.nav-link {
+/* .nav-link {
 font-size: 1.5rem;    
-}
-.nav-link a{
+} */
+.nav-link a:nth-child(1){
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin-right: 40px;
-    font-size: 1rem;
+    font-size: 16px;
     background: var(--primaryColor);
     color: var(--mainBlack);
     font-family:"Lato", sans-serif;
     border: none;
     border-radius: 6px;
-    padding: 0.5rem 0.75rem;
+    padding: 12px;
     letter-spacing: var(--mainSpacing);
     font-weight: bold;
     transition: var(--mainTransition);
     cursor: pointer;
 }
-.nav-link a:hover{
+.nav-link a:nth-child(1):hover{
     color: var(--mainWhite);
 }
-.nav-link a:active{
+.nav-link a:nth-child(1):active{
     background-color: transparent;
     border: 0.2px solid #e26d06;
     color: #000;
@@ -77,10 +77,10 @@ font-size: 1.5rem;
     color: #b6b6b6;
     /* color:#ff0000 ; */
     margin-right: 40px;
-    font-size: 1rem;
+    font-size: 16px;
     font-family:"Lato", sans-serif;
     font-weight:normal;
-    padding: 8px;
+    padding: 12px;
     background-color: #ff0000;
     border-radius: 8px;
     transition: 0.1s ease-in-out;
@@ -109,7 +109,9 @@ body{
 }
 .section-title h2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 30px;
     margin-bottom: 5rem;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
@@ -161,7 +163,8 @@ body{
 }
 .book h3{
     text-transform: capitalize;
-    font-size: 1.1rem;
+    font-size: 18px;
+    font-weight: 550;
     margin-top: 1rem;
     letter-spacing: var(--mainSpacing);
     text-align: center;
